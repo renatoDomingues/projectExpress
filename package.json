@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "find ./ -name '*.test.js' | xargs ./node_modules/.bin/mocha --reporter spec",
+    "test": "./node_modules/.bin/mocha \"./{,!(node_modules)/**/}*.test.js\"",
     "test2": "./node_modules/.bin/mocha **/*.test.js --reporter spec"
   },
   "author": "",
