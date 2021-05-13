@@ -4,6 +4,7 @@
 ### Installing
 * npm init
 * yarn add express
+* yarn add ejs
 
 ### Install
 
@@ -14,6 +15,7 @@
 * CHAI
 * MOCHA
 * SINON
+* EJS
 
 ## Add independence
 * yarn add mocha --dev
@@ -26,4 +28,15 @@
 * node run test2
 * npm test
 
-" ": "node_modules\\.bin\\istanbul cover node_modules\\mocha\\bin\\_mocha -- --reporter spec **/*.test.js"
+## Observações - Sobre o comando de Testes:
+````
+Se estiver utilizando o Windows, rodar o teste executando da seguinte forma: node_modules\.bin\mocha --reporter spec **/*.test.js
+e ao adicionar no package.json, ficará dessa forma: 
+"test": "node_modules\\.bin\\mocha --reporter spec **/*.test.js"
+
+Outra forma de uso em ambientes Windows é:
+"test": "./node_modules/.bin/mocha \"./{,!(node_modules)/**/}*.test.js\""​
+
+Usuários Linux podem executar desta forma:
+./node_modules/.bin/mocha --reporter spec **/*.test.js​
+````

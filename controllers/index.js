@@ -1,6 +1,9 @@
 
 const home = (req, res) => {
-    res.send('FullStack Master!! !!')
+    //res.send('FullStack Master!! !!')
+    res.render('home', {
+        time: new Date().getTime()
+    })
 }
 
 const pageOne = (req, res) => {
@@ -13,9 +16,11 @@ const calculator = (req, res) => {
         //const sum = parseFloat(req.query.num1) + parseFloat(req.query.num2)
         const { num1, num2} = req.query
         const sum = parseFloat(num1) + parseFloat(num2)
-        console.log('The sum is: ' +sum)
+        //console.log('The sum is: ' +sum)
+        //res.send('The sum is:' +sum)
+        res.render('calc', { sum } )
     }else{
-        res.send('Calculator!! !!')
+        res.send('calc')
     }
 }
 const pair = (req, res) => {
