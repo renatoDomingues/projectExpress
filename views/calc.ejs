@@ -1,0 +1,9 @@
+
+<%- include('partials/header') %> 
+    <p> The sum is: <%- sum %> </p>
+    <% if(sum%2===0){ %>
+        <p>The sum is pair! </p>
+    <% }else { %>
+        <p>The sum is odd!</p>
+    <% } %>
+<%- include('partials/footer') %>
