@@ -1,4 +1,14 @@
 
 <%- include('partials/header') %> 
         <p> <%- time %> </p>
+        <ul>
+                <% list.forEach((item) => { %>
+                        <li> <%- item %> </li>
+                <% }) %>
+        </ul>
+        <ul>
+                <% animals.forEach((item) => { %>
+                        <li> Name dog: <%- item.name %> </li>
+                <% }) %>
+        </ul>
 <%- include('partials/footer') %>

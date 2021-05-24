@@ -2,7 +2,14 @@
 const home = (req, res) => {
     //res.send('FullStack Master!! !!')
     res.render('home', {
-        time: new Date().getTime()
+        //time: new Date().getTime(),
+        time: 10,
+        list: ['Renato', 'Domingues', 'Test'],
+        animals: [
+            {name: 'Luck'},
+            {name: 'Youri'},
+            {name: 'Laura'}
+        ]
     })
 }
 
@@ -20,7 +27,8 @@ const calculator = (req, res) => {
         //res.send('The sum is:' +sum)
         res.render('calc', { sum } )
     }else{
-        res.send('calc')
+        //res.send('calc')
+        res.render('erro')
     }
 }
 const pair = (req, res) => {
